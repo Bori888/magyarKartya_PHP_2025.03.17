@@ -23,7 +23,9 @@ include_once "AB.php";
     $matrix = $adatbazis->oszlopLeker("nev", "kep", "szin");
     $adatbazis->megjelenitTeljes($matrix, "nev", "kep");
     $adatbazis->modosit("szin", "nev", "piros", "vörös");
-
+    $adatbazis->kartyaLeker();
+    $adatbazis->alsoTorles();
+    $adatbazis ->alsoVisszaTolt();
 
 
 

@@ -73,10 +73,27 @@ class AB
             # code...
         }
     }
-    public function modosit($tabla,$oszlop,$regiErtek,$ujErtek){
-        $sql= "UPDATE $tabla SET $oszlop='$ujErtek' WHERE $oszlop= '$regiErtek'";
-        $this ->kapcsolat->query($sql);
+    public function modosit($tabla, $oszlop, $regiErtek, $ujErtek)
+    {
+        $sql = "UPDATE $tabla SET $oszlop='$ujErtek' WHERE $oszlop= '$regiErtek'";
+        $this->kapcsolat->query($sql);
+    }
+    public function kartyaLeker()
+    {
+        $sql = "SELECT sz.nev,f.szoveg
+        FROM kartya as k 
+        INNER JOIN forma as f on k.formaAzon= f.formaAzon,
+        INNER JOIN szinas sz on sz.szinAzon =k.szinAzon";
+                }
 
-
+    public function alsoTorles(){
+        $sql="SELECT * FROM kartya WHERE kartya.formaAzon = 2";
+    }
+    public function alsoVisszaTolt(){
+        for ($i=1; $i < 5; $i++) { 
+            $sql= "INSERT INTO kartya ('formaAzon', 'szinAzon') VALUES ('2','$i')";
+            
+        }
+        
     }
 }
