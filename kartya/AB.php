@@ -61,8 +61,11 @@ class AB
     {
         echo "<table>";
         echo "<tr>";
-        echo "<th>Név</th>";
-        echo "<th>Kép</th>";
+        for ($i=1; $i < 9; $i++) { 
+            echo "<th>$i</th>";
+            
+        }
+        
         echo "</tr>";
         while ($sor = $matrix->fetch_row()) { //assoc
             echo "<tr>";
@@ -70,7 +73,6 @@ class AB
             echo "<td><img src='forras/$sor[1]' alt='szin kep'></td>";
             echo "</tr>";
 
-            # code...
         }
     }
     public function modosit($tabla, $oszlop, $regiErtek, $ujErtek)
