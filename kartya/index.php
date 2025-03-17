@@ -8,9 +8,11 @@ include_once "AB.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kártya</title>
+    <link rel="stylesheet" href="stilus.css">
 </head>
 
 <body>
+    <main>
     <?php
     $adatbazis = new AB();
     //feltöltés
@@ -29,5 +31,7 @@ include_once "AB.php";
     $adatbazis->kapcsolatBezar();
     ?>
 </body>
+    </main>
+    
 
 </html>

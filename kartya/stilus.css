@@ -1,0 +1,23 @@
+body {
+    background-image:url(forras/ash.jpg) ;
+    background-size:cover ;/*e miatt mutatja a teljes háttérképet*/
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-attachment:fixed ;
+}
+main{
+    background: rgba(255, 255, 255,0.2);
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    backdrop-filter:blur(2px);
+    
+}
+table,th,td{
+    border: 1px solid black;
+    margin: auto;
+    text-align: center;
+    
+
+}
+
